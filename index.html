@@ -295,7 +295,7 @@
     <div class="container">
       <h2>Be Part of the Beginning</h2>
       <p>We're keeping groups small to protect the land, the experience, and the learning depth. Join the Founders Waitlist to secure your 2025 spot, receive early pricing, and get monthly updates as we build.</p>
-      <form class="waitlist-form" id="waitlistForm">
+      <form action="https://formspree.io/f/xjgjjkll" method="POST" class="waitlist-form" id="waitlistForm">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="text" name="country" placeholder="Country of Residence" required>
@@ -313,13 +313,6 @@
         const item = q.parentElement;
         item.classList.toggle('open');
       });
-    });
-
-    // Form Submission (Replace with your Mailchimp/Loops endpoint)
-    document.getElementById('waitlistForm').addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Thank you! You\'re on the Founders Waitlist. Check your inbox for confirmation.');
-      // Replace this with: fetch('YOUR_ENDPOINT', { method: 'POST', body: new FormData(e.target) })
     });
   </script>
 </body>
