@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindful Permaculture & Bioconstruction Retreat | Vila Raiz | Brazil</title>
+  <meta name="description" content="Disconnect from the rush. Join a hands-on 7-day permaculture immersion in Brazil's Atlantic Forest. Learn natural building, syntropic agroforestry, and simple living. Book your 2025 Founder's spot.">
+  <meta name="theme-color" content="#2C3E2F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EDE4D9;
+      --text: #3F2C1F;
+      --accent: #2C3E2F;
+      --accent-hover: #1F2D21;
+      --terracotta: #C36A4F;
+      --white: #FFFFFF;
+      --light-gray: #F5F0EB;
+      --border: #D4C8B8;
+      --font-heading: 'Inter', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --spacing: clamp(1rem, 5vw, 4rem);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--spacing); }
+    section { padding: 5rem 0; }
+    h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: var(--white); }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem; }
+    p { margin-bottom: 1.2rem; max-width: 65ch; }
+    .btn {
+      display: inline-block; padding: 1rem 2rem; background: var(--accent); color: var(--white);
+      text-decoration: none; font-weight: 500; border-radius: 6px; transition: background 0.3s ease;
+      border: none; cursor: pointer; font-size: 1rem;
+    }
+    .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+    .btn-outline:hover { background: var(--accent); color: var(--white); }
+
+    /* HERO */
+    .hero {
+      position: relative; height: 100vh; min-height: 600px; display: flex; align-items: center;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; background: rgba(63, 44, 31, 0.55);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; }
+    .hero h1 { margin-bottom: 1rem; }
+    .hero p { font-size: clamp(1rem, 2.5vw, 1.25rem); color: #F0EBE3; margin-bottom: 2rem; }
+    .hero-meta { font-size: 0.9rem; color: #E8E0D5; margin-top: 1rem; opacity: 0.9; }
+
+    /* FOR WHOM */
+    .for-whom p { font-size: 1.1rem; }
+    .for-whom strong { color: var(--terracotta); }
+
+    /* EXPERIENCE */
+    .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .experience-grid ul { list-style: none; }
+    .experience-grid li { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem; }
+    .experience-grid li span { font-size: 1.4rem; flex-shrink: 0; }
+    .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+    .gallery img:first-child { grid-column: span 2; }
+
+    /* WORKSHOPS */
+    .timeline { border-left: 2px solid var(--border); padding-left: 1.5rem; margin: 2rem 0; }
+    .day { margin-bottom: 2rem; position: relative; }
+    .day::before {
+      content: ''; position: absolute; left: -2.1rem; top: 0.5rem; width: 12px; height: 12px;
+      background: var(--accent); border-radius: 50%;
+    }
+    .day h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0; }
+    .price-card {
+      background: var(--light-gray); padding: 2rem; border-radius: 8px; border: 1px solid var(--border);
+    }
+    .price-card .regular { text-decoration: line-through; color: #8A7A6A; font-size: 1.1rem; }
+    .price-card .founders { font-size: 2.5rem; font-weight: 700; color: var(--accent); margin: 0.5rem 0; }
+    .price-justification { background: #F8F4EF; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
+    .price-justification .icon { display: inline-block; width: 24px; text-align: center; margin-right: 0.5rem; }
+
+    /* ACCOMMODATION */
+    .accom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .accom-grid img { width: 100%; border-radius: 8px; }
+    .accom-note { background: var(--light-gray); padding: 1rem; border-left: 3px solid var(--terracotta); margin-top: 1rem; }
+
+    /* DATES */
+    .dates-list { margin: 2rem 0; }
+    .date-item {
+      display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 1rem;
+    }
+    .date-item:last-child { border-bottom: none; }
+    .spots { background: var(--terracotta); color: var(--white); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 1.5rem 0; }
+    .faq-question {
+      font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-question::after { content: '+'; font-size: 1.5rem; transition: transform 0.3s ease; }
+    .faq-item.open .faq-question::after { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding-top: 0; }
+    .faq-item.open .faq-answer { max-height: 300px; padding-top: 1rem; }
+
+    /* WAITLIST */
+    .waitlist { background: var(--accent); color: var(--white); padding: 5rem 0; }
+    .waitlist h2 { color: var(--white); }
+    .waitlist-form { display: grid; gap: 1rem; max-width: 600px; margin-top: 2rem; }
+    .waitlist-form input, .waitlist-form textarea {
+      width: 100%; padding: 1rem; border: none; border-radius: 6px; font-family: inherit;
+      background: rgba(255,255,255,0.9); color: var(--text);
+    }
+    .waitlist-form textarea { min-height: 120px; resize: vertical; }
+    .waitlist-form button { width: 100%; background: var(--terracotta); }
+    .waitlist-form button:hover { background: #A85A41; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .experience-grid, .accom-grid { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img:first-child { grid-column: span 1; }
+      h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <h1>We're building a place to disconnect—by hand.</h1>
+      <p>Vila Raiz — A 7-day hands-on permaculture immersion in Brazil's Atlantic Forest. Natural building, food forests, and simple Brazilian living. Opening Winter 2025.</p>
+      <a href="#waitlist" class="btn">Join the Founders Waitlist</a>
+      <p class="hero-meta">8 guests max. Built by hand. No wifi.</p>
+    </div>
+  </section>
+
+  <!-- FOR WHOM -->
+  <section class="for-whom container">
+    <h2>Not for tourists. For builders.</h2>
+    <p>If you're looking for a luxury resort with room service and scheduled yoga, this isn't it. Vila Raiz is for people who want to <strong>get their hands dirty</strong>, sweat under the sun, and learn how to grow, build, and live with intention.</p>
+    <p>You'll wake up early, work alongside us in the forest, eat what we harvest, and share stories around the fire. It's physically engaging, mentally grounding, and deeply human.</p>
+    <p><strong>If you want to remember how to live simply, come here.</strong> If you need constant stimulation, stay home.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="container">
+    <h2>7 days. Live it, don't watch it.</h2>
+    <div class="experience-grid">
+      <div>
+        <p style="font-weight:500; margin-bottom:1rem;">What your immersion includes:</p>
+        <ul>
+          <li><span>🏠</span> Hand-built wooden cabin accommodation</li>
+          <li><span>🍲</span> Farm-to-table meals (vegetarian/vegan friendly)</li>
+          <li><span>🛠️</span> Daily hands-on bioconstruction & agroforestry sessions</li>
+          <li><span>🌳</span> Guided Atlantic Forest walks & plant identification</li>
+          <li><span>🔥</span> Evening circles, storytelling & community dinners</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80" alt="Hands building with natural materials">
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80" alt="Food forest planting">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Freshly harvested meal">
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOPS -->
+  <section class="container">
+    <h2>Learn by Doing: A Typical Week</h2>
+    <div class="timeline">
+      <div class="day">
+        <h3>Day 1-2: Tire Wall Bioconstruction</h3>
+        <p>Learn rammed earth techniques, thermal mass principles, and help shape the foundation of our next guest cabin. No experience needed.</p>
+      </div>
+      <div class="day">
+        <h3>Day 3-4: Syntropic Agroforestry</h3>
+        <p>Map, plant, and prune food forests using Ernst Götsch's methods. Understand succession layers, biomass cycling, and natural fertility.</p>
+      </div>
+      <div class="day">
+        <h3>Day 5: Water & Soil Systems</h3>
+        <p>Build swales, keyline irrigation, and compost toilets. Learn how to read water flow and restore degraded land.</p>
+      </div>
+      <div class="day">
+        <h3>Day 6-7: Harvest, Preserve & Celebrate</h3>
+        <p>Process what you've grown, ferment, cook together, and close with a community fire circle. Leave with skills, not souvenirs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="container">
+    <h2>Founders 2025 Pricing</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>7-Day Immersion</h3>
+        <p class="regular">Regular 2026: €1,750</p>
+        <p class="founders">€1,150</p>
+        <p>Includes accommodation, all meals, daily workshops, forest access, and post-retreat resources.</p>
+      </div>
+      <div class="price-card">
+        <h3>5-Day Pilot</h3>
+        <p class="regular">Regular 2026: €1,200</p>
+        <p class="founders">€790</p>
+        <p>Core bioconstruction + agroforestry modules. Ideal for those testing a longer stay.</p>
+      </div>
+    </div>
+    <div class="price-justification">
+      <h3 style="font-size:1.2rem; margin-bottom:1rem;">Why €1,150 is fair:</h3>
+      <p><span class="icon">🇨🇷</span> Comparable Costa Rica retreats charge €2,100+ for similar hands-on permaculture programs.</p>
+      <p><span class="icon">🇪🇺</span> European bioconstruction courses average €1,850–€2,400, often without accommodation or meals.</p>
+      <p><span class="icon">🤝</span> Founders pricing covers our real costs: materials, local labor, organic food, and land stewardship. You're not subsidizing luxury—you're funding regeneration.</p>
+    </div>
+  </section>
+
+  <!-- ACCOMMODATION -->
+  <section class="container">
+    <h2>Simple. Clean. Real.</h2>
+    <div class="accom-grid">
+      <div>
+        <p>You sleep in a wooden cabin we built with local timber and natural insulation. It's comfortable, ventilated, and designed for the climate. You'll have a proper bed, mosquito net, shared compost toilet, and cold-water shower.</p>
+        <div class="accom-note">
+          <strong>Honest note:</strong> There's no AC, no heating, and no wifi. You're in the forest. Expect insects, morning dew, and the sound of rain on the roof. That's the point.
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80" alt="Simple wooden cabin in forest">
+    </div>
+  </section>
+
+  <!-- DATES -->
+  <section class="container">
+    <h2>Our First Groups</h2>
+    <div class="dates-list">
+      <div class="date-item">
+        <div>
+          <strong>July 14–21, 2025</strong><br>Winter Immersion (Southern Hemisphere)
+        </div>
+        <span class="spots">4 spots left</span>
+      </div>
+      <div class="date-item">
+        <div>
+          <strong>August 18–25, 2025</strong><br>Focus: Agroforestry & Water Systems
+        </div>
+        <span class="spots">Open</span>
+      </div>
+      <div class="date-item">
+        <div>
+          <strong>October 6–13, 2025</strong><br>Spring Planting & Bioconstruction
+        </div>
+        <span class="spots">Open</span>
+      </div>
+    </div>
+    <a href="#waitlist" class="btn btn-outline" style="margin-top:1rem;">Join Waitlist for These Dates</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-question">Do I need prior permaculture experience?</div>
+        <div class="faq-answer"><p>No. We teach from the ground up. Beginners learn alongside experienced practitioners. Curiosity and willingness to work are the only requirements.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What's the physical demand like?</div>
+        <div class="faq-answer"><p>Moderate to high. You'll lift earth, dig, carry timber, and work outdoors in varying weather. Pace is adjusted to group ability, but this is active, not passive.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is travel/visa included?</div>
+        <div class="faq-answer"><p>No. You arrange your own flights to São Paulo or Rio. We'll help coordinate ground transport to the retreat site and assist with Brazilian visa documentation.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I extend my stay or return later?</div>
+        <div class="faq-answer"><p>Yes. Founders get priority booking for 2026 programs. Many guests return for volunteer stays or longer immersions once they experience the rhythm of Vila Raiz.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="waitlist" id="waitlist">
+    <div class="container">
+      <h2>Be Part of the Beginning</h2>
+      <p>We're keeping groups small to protect the land, the experience, and the learning depth. Join the Founders Waitlist to secure your 2025 spot, receive early pricing, and get monthly updates as we build.</p>
+      <form class="waitlist-form" id="waitlistForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="country" placeholder="Country of Residence" required>
+        <textarea name="motivation" placeholder="What calls you the most in this experience?" required></textarea>
+        <button type="submit" class="btn">Secure My Founders Spot</button>
+        <p style="font-size:0.85rem; opacity:0.8; margin-top:0.5rem;">🔒 We respect your inbox. Unsubscribe anytime. 8 spots per group.</p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+
+    // Form Submission (Replace with your Mailchimp/Loops endpoint)
+    document.getElementById('waitlistForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you! You\'re on the Founders Waitlist. Check your inbox for confirmation.');
+      // Replace this with: fetch('YOUR_ENDPOINT', { method: 'POST', body: new FormData(e.target) })
+    });
+  </script>
+</body>
+</html>
