@@ -499,10 +499,99 @@ nav.scrolled {
   z-index: 1;
 }
 
-/* Adicionei apenas os principais para não ficar gigante aqui.
-   Se quiser, posso enviar o CSS 100% completo com todas as seções (farm, pancs, who, week, how, etc). */
+footer {
+  background: #F6F2EA;
+  color: var(--charcoal);
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 32px;
+  align-items: start;
+  padding: 60px 0 24px;
+}
+.footer-brand {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--forest);
+}
+.footer-brand em { color: var(--terracota); font-style: italic; }
+.footer-tagline {
+  margin-top: 0.75rem;
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.7;
+}
+.footer-heading {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 1rem;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.footer-links a {
+  color: var(--warm-gray);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .2s;
+}
+.footer-links a:hover {
+  color: var(--forest);
+}
+.footer-bar {
+  padding: 24px 0 48px;
+  color: var(--warm-gray);
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid rgba(42, 39, 32, .08);
+}
+
+.wa-sticky {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--terracota);
+  color: var(--cream);
+  padding: 14px 18px;
+  border-radius: 999px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.18);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: transform .2s, box-shadow .2s;
+}
+.wa-sticky:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.22);
+}
+.wa-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+.wa-text {
+  white-space: nowrap;
+}
 
 @media (max-width: 900px) {
+  .lang-switch {
+    top: auto;
+    bottom: 96px;
+    right: 18px;
+    left: auto;
+  }
   .what-grid { grid-template-columns: 1fr; gap: 40px; }
   .what-quote { position: static; }
   .exp-grid { grid-template-columns: 1fr; }
@@ -517,6 +606,12 @@ nav.scrolled {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .section { padding: 72px 0; }
+  .wa-sticky {
+    right: 18px;
+    bottom: 18px;
+    width: calc(100% - 36px);
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
